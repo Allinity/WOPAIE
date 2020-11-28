@@ -185,7 +185,7 @@ function Allinity:CreateWindow(gamename1)
     infotext.Position = UDim2.new(0.0180420522, 0, 0.151967943, 0)
     infotext.Size = UDim2.new(0, 398, 0, 61)
     infotext.Font = Enum.Font.Nunito
-    infotext.Text = "             is a Roblox Hub, that makes your Exploiting Expierience easier. We provide you one of the best hubs and hope you enjoy it!."
+    infotext.Text = "              is a Roblox Hub, that makes your Exploiting Expierience easier. We provide you one of the best hubs and hope you enjoy it!."
     infotext.TextColor3 = Color3.fromRGB(175, 175, 175)
     infotext.TextSize = 18.000
     infotext.TextWrapped = true
@@ -785,14 +785,14 @@ function Allinity:CreateWindow(gamename1)
                                 DropYSize = DropYSize + 48
                                 optionBtn.MouseButton1Click:Connect(function()
                                     callback(v)
-                                    dropdownCurrentItem.Text = v
+                                    dropdownCurrentItem.Text = textInfo..": "..v
                                     dropDownFrame:TweenSize(UDim2.new(0, 388, 0, 44), "In", "Quint", 0.10)
                                     dropDownFrame:TweenSize(UDim2.new(0, 388, 0, 44), "In", "Quint", 0.10)
+                                    wait(0.10)
+                                    UpdateSize()
                                     game.TweenService:Create(dropDownOpen, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In),{
                                         Rotation = 0
                                     }):Play()
-                                    wait(0.10)
-                                    UpdateSize()
                                     isDropped = false
                                 end)
 
