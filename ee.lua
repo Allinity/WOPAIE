@@ -185,7 +185,7 @@ function Allinity:CreateWindow(gamename1)
     infotext.Position = UDim2.new(0.0180420522, 0, 0.151967943, 0)
     infotext.Size = UDim2.new(0, 398, 0, 61)
     infotext.Font = Enum.Font.Nunito
-    infotext.Text = "              is an Roblox Hub, that makes your Hacking Expierience easier. We provide you the best options in alot of games."
+    infotext.Text = "           is a Roblox Hub, that makes your Exploiting Expierience easier. We provide you one of the best hubs and hope you enjoy it!."
     infotext.TextColor3 = Color3.fromRGB(175, 175, 175)
     infotext.TextSize = 18.000
     infotext.TextWrapped = true
@@ -198,7 +198,7 @@ function Allinity:CreateWindow(gamename1)
     discordtext.Position = UDim2.new(0.017, 0,0.904, 0)
     discordtext.Size = UDim2.new(0, 300, 0, 27)
     discordtext.Font = Enum.Font.Nunito
-    discordtext.Text = "Please Consider Join Our Discord Server (Hu9rxwg)"
+    discordtext.Text = "https://discord.gg/Hu9rxwg"
     discordtext.TextColor3 = Color3.fromRGB(175, 175, 175)
     discordtext.TextSize = 18.000
     discordtext.TextWrapped = true
@@ -787,6 +787,10 @@ function Allinity:CreateWindow(gamename1)
                                     callback(v)
                                     dropdownCurrentItem.Text = v
                                     dropDownFrame:TweenSize(UDim2.new(0, 388, 0, 44), "In", "Quint", 0.10)
+                                    dropDownFrame:TweenSize(UDim2.new(0, 388, 0, 44), "In", "Quint", 0.10)
+                                    game.TweenService:Create(dropDownOpen, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In),{
+                                        Rotation = 0
+                                    }):Play()
                                     wait(0.10)
                                     UpdateSize()
                                     isDropped = false
@@ -857,3 +861,5 @@ function Allinity:CreateWindow(gamename1)
     end
     return tabHandler
 end
+
+return Allinity
