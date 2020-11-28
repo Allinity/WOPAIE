@@ -185,7 +185,7 @@ function Allinity:CreateWindow(gamename1)
     infotext.Position = UDim2.new(0.0180420522, 0, 0.151967943, 0)
     infotext.Size = UDim2.new(0, 398, 0, 61)
     infotext.Font = Enum.Font.Nunito
-    infotext.Text = "           is a Roblox Hub, that makes your Exploiting Expierience easier. We provide you one of the best hubs and hope you enjoy it!."
+    infotext.Text = "            is a Roblox Hub, that makes your Exploiting Expierience easier. We provide you one of the best hubs and hope you enjoy it!."
     infotext.TextColor3 = Color3.fromRGB(175, 175, 175)
     infotext.TextSize = 18.000
     infotext.TextWrapped = true
