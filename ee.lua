@@ -401,9 +401,11 @@ function Allinity:CreateWindow(gamename1)
             TextButton.MouseButton1Click:Connect(function()
                 callback()
             end)
+        end
 
             function ElementHandler:addToggle(infor, callback)
                 infor = infor or "Toggle me"
+                callback =callback or function() end
 
                 local toggleFrame = Instance.new("Frame")
                 local mainCorner = Instance.new("UICorner")
@@ -482,6 +484,7 @@ function Allinity:CreateWindow(gamename1)
                         toggleBtn.Text = ""
                     end
                 end)
+            end
 
                 function ElementHandler:addBind(infoo, first, callback)
                     local oldKey = first.Name
@@ -546,6 +549,7 @@ function Allinity:CreateWindow(gamename1)
                             end
                         end
                     end)
+                end
 
                     function ElementHandler:addSlider(minvalue, maxvalue, sliderin, callback)
                         minvalue = minvalue or 0
@@ -680,7 +684,8 @@ function Allinity:CreateWindow(gamename1)
                                 end
                             end)
                         end)
-                        
+                    end
+
                         function ElementHandler:addDropdown(textInfo, list, callback)
                             callback = callback or function() end
                             list = list or {}
@@ -754,6 +759,7 @@ function Allinity:CreateWindow(gamename1)
                                 end
                             end)
 
+
                             mainCorner_2.CornerRadius = UDim.new(0, 5)
                             mainCorner_2.Name = "mainCorner"
                             mainCorner_2.Parent = dropdownMainThings
@@ -795,7 +801,7 @@ function Allinity:CreateWindow(gamename1)
                                     }):Play()
                                     isDropped = false
                                 end)
-
+                            end
 
                             function ElementHandler:addTextbox(infoooi1, placeholder1, callback)
                                 infoooi1 = infoooi1 or "f"
@@ -850,11 +856,8 @@ function Allinity:CreateWindow(gamename1)
                                     callback(TextBox.Text)
                                     TextBox.Text = ""
                                 end)
-                            end
-                            end
-                        end
-                    end
-                end
+
+                
             end
         end
         return ElementHandler
